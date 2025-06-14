@@ -48,7 +48,7 @@
 
     <!-- main -->
     <main style="padding-top: 130px;">
-        <section class="home container">
+        <section id="home" class="home container">
             <div class="d-flex">
                 <div class="home-left">
                     <h1 class="home-tite">Frontend <br><span>Developer</span></h1>
@@ -65,14 +65,26 @@
                     </div>
 
                     <div class="home-btns">
-                        <button type="button" class="home-btn">Project <i
-                                class="fa-solid fa-up-right-from-square"></i></button>
-                        <button type="button" class="home-btn">Contact <i class="fa-regular fa-envelope"></i></button>
                         <button class="contact-button">
-                            <span class="text">Contact</span>
-                            <span class="icon">✉️</span>
+                            Project <i class="fa-solid fa-up-right-from-square"></i>
+                        </button>
+                        <button class="contact-button">
+                            Contact <i class="fa-regular fa-envelope"></i>
                         </button>
 
+
+                    </div>
+                    <div class="home-bottom__btns">
+                        <button type="button" class="home-bottom__btn">
+                            <a href="https://github.com/jony37 ">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </button>
+                        <button type="button" class="home-bottom__btn">
+                            <a href="https://www.instagram.com/_jony7/?igsh=ZDYyeW5saGhvb3p3&utm_source=qr#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </button>
                     </div>
                 </div>
                 <div class="home-right">
@@ -83,9 +95,237 @@
 
 
         </section>
+
+        <!-- about me -->
+        <section id="about">
+            <div class="about-title__div">
+                <h1>About Me and <br><span>my Friends</span></h1>
+                <p><i class="fa-solid fa-brain"></i>if you see this text then this project was copied<i
+                        class="fa-solid fa-brain"></i></p>
+            </div>
+            <div class="container">
+                <div class="offer__slider" style="margin-top: -100px;">
+                    <button class="prev">‹</button>
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- 1 -->
+                            <div class="carousel-item">
+                                <!-- 1 -->
+                                <div class="d-flex">
+                                    <div class="about-content">
+                                        <h1 class="color">Hello, I'm</h1>
+                                        <span style="color: white;">Jonpolat Ravshanov</span>
+                                        <p>Hello! My name is Jonpulat Ravshanov. I’m 17 years old and
+                                            <br>currently learning
+                                            This portfolio is one of my projects made with TypeScript. <br>I
+                                            also have
+                                            several friends—you’ll meet them in the next slide.
+                                        </p>
+                                        <button type="button" class="about-content__btn">
+                                            <i class="fa-solid fa-file"></i>
+                                            Download CV
+                                        </button>
+                                        <button type="button" class="about-content__btn">
+                                            <i class="fa-solid fa-code"></i>
+                                            View Projects
+                                        </button>
+                                    </div>
+
+                                    <div class="about-image">
+                                        <img src="./assets/img/Photo.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2 -->
+                            <div class="carousel-item">
+                                <div class="d-flex">
+                                    <div class="about-content">
+                                        <h1 class="color">Hello, I'm</h1>
+                                        <span style="color: white;">Jahongir</span>
+                                        <p>Hello! My name is Jahongir Xolmirzayev. I’m 17 years old and
+                                            <br>currently learning
+                                            This portfolio is one of my projects made with TypeScript. <br>I
+                                            also have
+                                            several friends—you’ll meet them in the next slide.
+                                        </p>
+                                        <button type="button" class="about-content__btn">
+                                            <i class="fa-solid fa-file"></i>
+                                            Download CV
+                                        </button>
+                                        <button type="button" class="about-content__btn">
+                                            <i class="fa-solid fa-code"></i>
+                                            View Projects
+                                        </button>
+                                    </div>
+
+                                    <div class="about-image">
+                                        <img src="./assets/img/5359637505282013625_121.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3 -->
+                            <div class="carousel-item">
+                                <div class="d-flex">
+                                    <div class="about-content">
+                                        <h1 class="color">Hello, I'm</h1>
+                                        <span style="color: white;">Asilbek</span>
+                                        <p>Hello! My name is Asil. I’m 17 years old and
+                                            <br>currently learning
+                                            This portfolio is one of my projects made with TypeScript. <br>I
+                                            also have
+                                            several friends—you’ll meet them in the next slide.
+                                        </p>
+                                        <button type="button" class="about-content__btn">
+                                            <i class="fa-solid fa-file"></i>
+                                            Download CV
+                                        </button>
+                                        <button type="button" class="about-content__btn">
+                                            <i class="fa-solid fa-code"></i>
+                                            View Projects
+                                        </button>
+                                    </div>
+
+                                    <div class="about-image">
+                                        <img src="./assets/img/asil.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <button class="next">›</button>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- portfolio -->
+        <section id="portfolio">
+            <div class="portfolio-content">
+                <h1 class="portfolio-content__title color">
+                    Portfolio Showcase
+                </h1>
+                <p class="portfolio-content__subtitle">
+                    Explore my journey through projects, certifications, and technical expertise. Each <br>section
+                    represents a milestone in my continuous learning path.
+                </p>
+            </div>
+
+            <div class="container tab-div">
+                <div class="tab-wrapper">
+                    <div class="d-flex">
+                        <div class="tab focus">
+                            <i class="fa-solid fa-code"></i>
+                            <p>Projects</p>
+                        </div>
+
+                        <div class="tab">
+                            <i class="fa-solid fa-medal"></i>
+                            <p>Certificates</p>
+                        </div>
+
+                        <div class="tab">
+                            <i class="fa-brands fa-medapps"></i>
+                            <p>Tech Stack</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1 tab -->
+                <div class="cards-wrapper content active">
+                    <div class="d-flex">
+                        <div class="card-bg">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 2 tab -->
+                <div class="sertificat-divs content">
+                </div>
+
+                <!-- 3 tab -->
+                <div class="content">
+                    <div class="content-cards d-flex">
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="contact-text">
+                <h1 class="color">
+                    Contact Me
+                </h1>
+                <p class="subtitle">Got a question? Send me a message, and I'll get back to you soon.</p>
+            </div>
+
+            <div class="container">
+                <div class="d-flex">
+                    <div class="col-6 contect-me">
+                        <div class="contact-form" style="margin: 50px 0px;">
+                            <h1 class="color">Get in Touch</h1>
+                            <p class="subtitle" style="padding: 14px 0px;">Have something to discuss? Send me a message
+                                and let's talk.</p>
+
+                            <form>
+                                <div class="input-box">
+                                    <i class="fa-regular fa-user"></i>
+                                    <input type="text" placeholder="Your Name" required id="name" />
+                                </div>
+                                <div class="input-box">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <input type="email" placeholder="Your Email" required id="email" />
+                                </div>
+                                <div class="input-box textarea">
+                                    <i class="fa-regular fa-comment"></i>
+                                    <textarea placeholder="Your Message" required id="message"></textarea>
+                                </div>
+                                <button type="submit" class="send-btn">
+                                    <i class="fa-regular fa-paper-plane"></i> Send Message
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="response">
+                            <h1>Hello</h1>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </main>
+
+
+
     <!-- script js -->
     <script src="./assets/ts/app.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "Eiepc66CLfc3LE6FW",
+            });
+        })();
+
+    </script>
 </body>
 
 </html>

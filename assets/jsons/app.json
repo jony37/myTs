@@ -1,0 +1,26 @@
+[
+  {
+    "link": "https://cv-maker-lyart.vercel.app",
+    "title": "Cv maker",
+    "subtitle": "in that you can create your cv and the site has some more features like dark mode carusel",
+    "image": "./assets/img/cv.png"
+  },
+  {
+    "link": "https://lamodajony.vercel.app/",
+    "title": "Lamoda",
+    "subtitle": "in that you can create your cv and the site has some more features like dark mode carusel",
+    "image": "./assets/img/lamoda.png"
+  },
+  {
+    "link": "https://weather-by-jony.vercel.app/",
+    "title": "Weather",
+    "subtitle": "in that you can create your cv and the site has some more features like dark mode carusel",
+    "image": "./assets/img/weather.png"
+  },
+    {
+    "link": "https://learndrive-gkxm.vercel.app/",
+    "title": "Lern to drive",
+    "subtitle": "in that you can create your cv and the site has some more features like dark mode carusel",
+    "image": "./assets/img/drive.png"
+  }
+]

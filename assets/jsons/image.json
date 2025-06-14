@@ -1,0 +1,26 @@
+[
+  {
+    "src": "./assets/img/html.svg",
+    "title": "HTML"
+  },
+  {
+    "src": "./assets/img/css.svg",
+    "title": "CSS"
+  },
+  {
+    "src": "./assets/img/bootstrap.svg",
+    "title": "Bootstrap"
+  },
+    {
+    "src": "./assets/img/color-1c4aab2b.png",
+    "title": "Sass"
+  },
+  {
+    "src": "./assets/img/javascript.svg",
+    "title": "Javascript"
+  },
+  {
+    "src": "./assets/img/typescript.svg",
+    "title": "Typescript"
+  }
+]
