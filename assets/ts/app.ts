@@ -163,15 +163,16 @@ window.addEventListener("DOMContentLoaded", function () {
     form = document.querySelector("form") as HTMLFormElement,
     response = document.querySelector(".response") as HTMLElement;
 
+  const h1 = document.createElement("h1");
+
   function showMessage(text: string, isError = false) {
-    const h1 = document.createElement("h1");
     h1.innerHTML = text;
     response.appendChild(h1);
     response.classList.toggle("error", isError);
-    response.classList.add("show");
+    response.classList.add("sucses");
 
     setTimeout(() => {
-      response.classList.remove("show");
+      response.classList.remove("sucses");
     }, 3000);
   }
 
@@ -185,15 +186,134 @@ window.addEventListener("DOMContentLoaded", function () {
     emailjs
       .send("service_ggarkcc", "template_hopz0q7", parms)
       .then(() => {
-        response.innerHTML = "Message sent successfully!";
-        response.classList.add("sucses");
-        form.reset(); // очистка формы после отправки
+        showMessage("Message sent successfully!");
+        form.reset();
       })
-      .catch((err) => alert("Error sending message: " + err.text));
+      .catch((err) => {
+        showMessage("Ошибка при отправке: " + err.text, true);
+      });
   }
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault(); // предотвращает перезагрузку страницы
+    e.preventDefault();
     sendEmail();
   });
+
+  // Coment section
+  const photoInput = document.getElementById("photo-input") as HTMLInputElement;
+  const photoPreview = document.getElementById("photo-preview") as HTMLElement;
+  const previewImg = document.getElementById("preview-img") as HTMLImageElement;
+  const removePhotoBtn = document.getElementById(
+    "remove-photo"
+  ) as HTMLButtonElement;
+
+  photoInput.addEventListener("change", function () {
+    const file = this.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        previewImg.src = e.target?.result as string;
+        photoPreview.classList.remove("hidden");
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  removePhotoBtn.addEventListener("click", function () {
+    previewImg.src = "";
+    photoInput.value = "";
+    photoPreview.classList.add("hidden");
+  });
+
+  let uploadedImageBase64: string = "";
+
+  photoInput.addEventListener("change", function () {
+    const file = this.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        uploadedImageBase64 = e.target?.result as string; // Сохраняем base64
+        previewImg.src = uploadedImageBase64;
+        photoPreview.classList.remove("hidden");
+      };
+
+      reader.readAsDataURL(file);
+    }
+  });
+
+  console.log(uploadedImageBase64);
+
+type CommentData = {
+  name: string;
+  message: string;
+  image: string;
+  time: string;
+};
+
+const PersonsName = document.querySelector("#coment-name") as HTMLInputElement,
+  PersonMessage = document.querySelector("#coment-message") as HTMLTextAreaElement,
+  PersonPhoto = document.querySelector("#preview-img") as HTMLImageElement,
+  postBtn = document.querySelector(".post-btn") as HTMLButtonElement,
+  commentsContainer = document.querySelector(".all-coment") as HTMLElement,
+  commentsLengthEl = document.querySelector(".coments-lenght") as HTMLElement;
+
+const defaultUserImage = "./assets/img/Photo.png"; 
+let comments: CommentData[] = [];
+
+function renderComments() {
+  commentsContainer.innerHTML = ""; 
+  comments.forEach(({ name, message, image, time }) => {
+    const div = document.createElement("div");
+    div.className = "comentariya-div d-flex";
+    div.innerHTML = `
+      <div class="comentariya-div__img d-flex">
+          <img src="${image}" alt="User Photo">
+      </div>
+      <div style="margin-left: 14px;">
+          <p class="coment-name">${name} <span class="time">${time}</span></p>
+          <p class="coment-message">${message}</p>
+      </div>
+    `;
+    commentsContainer.appendChild(div);
+  });
+
+  commentsLengthEl.textContent = comments.length.toString();
+}
+
+function loadComments() {
+  const saved = localStorage.getItem("comments");
+  if (saved) {
+    comments = JSON.parse(saved);
+    renderComments();
+  }
+}
+
+function saveComments() {
+  localStorage.setItem("comments", JSON.stringify(comments));
+}
+
+postBtn.addEventListener("click", () => {
+  const name = PersonsName.value.trim();
+  const message = PersonMessage.value.trim();
+  const image = PersonPhoto.src || defaultUserImage;
+
+  if (!name || !message) {
+    alert("Введите имя и сообщение.");
+    return;
+  }
+
+  const time = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+
+  const newComment: CommentData = { name, message, image, time };
+  comments.push(newComment);
+  saveComments();
+  renderComments();
+
+  PersonsName.value = "";
+  PersonMessage.value = "";
+  PersonPhoto.src = defaultUserImage;
+});
+
+loadComments(); 
 });

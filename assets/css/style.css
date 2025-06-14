@@ -623,6 +623,7 @@ nav h1 {
   max-width: 600px;
   width: 100%;
   background-color: rgba(30, 41, 59, 0.495);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
   padding: 30px;
   border-radius: 12px;
   backdrop-filter: blur(6px);
@@ -671,7 +672,7 @@ nav h1 {
   padding: 15px;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, #8e6eff, #a278ff);
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -699,9 +700,215 @@ nav h1 {
   display: none;
 }
 .sucses {
-    display: block !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  color: green;
 }
 
 .status-message.error {
   background-color: #dc3545; /* красный для ошибок */
+}
+.coment {
+  background-color: rgba(30, 41, 59, 0.495);
+  border-radius: 20px;
+  padding: 24px;
+  width: 600px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  margin-left: 24px;
+  height: auto;
+}
+
+.comment-box {
+  background-color: rgb(255 255 255 / 0.1);
+  border-radius: 20px;
+  padding: 14px;
+}
+
+.comment-box h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #bbb;
+}
+
+.comment-box h2 span {
+  color: #8e6eff;
+}
+
+.comment-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+  color: #aaa;
+}
+
+.comment-form label span {
+  color: #ff4d6d;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  background: #1d1f2e;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 15px;
+  color: #fff;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.comment-form textarea {
+  resize: none;
+}
+
+.file-upload {
+  margin-top: 10px;
+}
+
+.file-label {
+  display: block;
+  border: 2px solid #8e6eff;
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px;
+  color: #8e6eff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.file-label:hover {
+  background-color: rgba(142, 110, 255, 0.1);
+}
+
+.file-hint {
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px;
+  display: block;
+  text-align: center;
+}
+
+.post-btn {
+  margin-top: 25px;
+  width: 100%;
+  background: linear-gradient(to right, #8e6eff, #a278ff);
+  border: none;
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.post-btn:hover {
+  opacity: 0.9;
+}
+
+.photo-upload {
+  margin-top: 20px;
+}
+
+.photo-label {
+  display: block;
+  color: #ccc;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.photo-label small {
+  color: #888;
+  font-weight: 400;
+}
+
+.photo-trigger {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #222436;
+  border-radius: 10px;
+  border: 2px solid #8e6eff;
+  color: #8e6eff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.photo-trigger:hover {
+  background: rgba(142, 110, 255, 0.1);
+}
+
+.photo-preview {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px;
+  background: #202437;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+}
+
+.photo-preview img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.remove-photo {
+  background: #b04343;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.remove-photo:hover {
+  background: #d15757;
+}
+
+.hidden {
+  display: none;
+}
+
+.comentariya-div__img {
+  width: 50px;
+  height: 50px !important;
+}
+.comentariya-div__img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.all-coment {
+    margin-top: 24px;
+    overflow-y: hidden;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.comentariya-div {
+    background-color: rgb(255 255 255 / 0.05);
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(128, 128, 128, 0.425);
+    transition: all 0.5s;
+}
+.comentariya-div:hover {
+    background-color: rgba(255, 255, 255, 0.138);
+    transform: translateY(-5px);
+
+}
+.coment-name {
+    color: white;
+    font-size: 20px;
+}
+.time {
+    margin-left: 320px;
+    font-size: 16px;
+    color: var(--p-color);
 }

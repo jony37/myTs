@@ -270,7 +270,7 @@
                 <p class="subtitle">Got a question? Send me a message, and I'll get back to you soon.</p>
             </div>
 
-            <div class="container">
+            <div class="container" style="margin-top: -300px;">
                 <div class="d-flex">
                     <div class="col-6 contect-me">
                         <div class="contact-form" style="margin: 50px 0px;">
@@ -298,12 +298,60 @@
                         </div>
 
                         <div class="response">
-                            <h1>Hello</h1>
+
                         </div>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-6 coment-section" style="margin-top: 320px;">
+                        <div class="coment-bg">
+                            <div class="coment">
+                                <div class="comment-box">
+                                    <h1><i class="fa-regular fa-comment"></i> Comments <span class="coments-lenght">(0)</span></h1>
 
+                                    <form class="comment-form">
+                                        <label for="name">Name <span>*</span></label>
+                                        <input type="text" id="coment-name" placeholder="Enter your name" required>
+
+                                        <label for="message">Message <span>*</span></label>
+                                        <textarea id="coment-message" rows="4" placeholder="Write your message here..."
+                                            required></textarea>
+                                        <div class="file-upload">
+                                            <input type="file" id="photo" hidden>
+                                            <div class="photo-upload">
+                                                <label class="photo-label">
+                                                    Profile Photo <small>(optional)</small>
+                                                </label>
+
+                                                <div class="photo-preview hidden" id="photo-preview">
+                                                    <img src="" alt="Profile Photo" id="preview-img" />
+                                                    <button class="remove-photo" id="remove-photo">
+                                                        <i class="fa-solid fa-xmark"></i> Remove Photo
+                                                    </button>
+                                                </div>
+
+                                                <input type="file" id="photo-input" accept="image/*" hidden />
+                                                <label for="photo-input" class="photo-trigger">
+                                                    <i class="fa-regular fa-image"></i> Choose Profile Photo
+                                                </label>
+                                            </div>
+
+                                            <small class="file-hint">Max file size: 5MB</small>
+                                        </div>
+
+                                        <button type="button" class="post-btn">
+                                            <i class="fa-regular fa-paper-plane"></i> Post Comment
+                                        </button>
+                                    </form>
+
+
+                                    <div class="all-coment">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
